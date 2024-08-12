@@ -16,6 +16,10 @@ const getData = (): IData => {
   return JSON.parse(fs.readFileSync("./data.json", "utf-8"));
 };
 
+const writeData = (data: any): void => {
+  fs.writeFileSync("./data.json", JSON.stringify(data));
+};
+
 const app: Application = express();
 app.use(express.json());
 
