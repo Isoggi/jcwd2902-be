@@ -31,7 +31,7 @@ const middleware = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-app.use("/products", middleware, _router);
+app.use("/expenses", middleware, _router);
 
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
   // throw new Error("Something went wrong");

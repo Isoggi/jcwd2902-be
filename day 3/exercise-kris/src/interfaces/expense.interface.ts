@@ -1,8 +1,12 @@
-interface IExpense {
-  id: number;
+export interface IExpense {
+  id?: number;
   title: string;
   nominal: number;
   type: "income" | "expense";
   category: "salary" | "food" | "transport";
   date: Date;
+}
+
+export interface IExpenses {
+  expenses: IExpense[];
 }
