@@ -38,13 +38,12 @@ create Table BookTransactions(
     returned_at DATETIME ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (book_id) REFERENCES Books(id),
     FOREIGN KEY (member_id) REFERENCES Member(id)
-)
+) ENGINE = InnoDB;
 
 create Table BookStocks(
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     book_id INTEGER NOT NULL,
-    stock INT DEFAULT 0
-
+    stock INT DEFAULT 0,
 )
 
 
